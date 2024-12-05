@@ -38658,40 +38658,7 @@ var render = function() {
                       ])
                     ]),
 
-                    _c("div", { staticClass: "col-md-12" }, [
-                        _c("div", { staticClass: "input-group" }, [
-                          _vm._m(2),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "form-line" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.vendor.rtn,
-                                  expression: "vendor.rtn"
-                                }
-                              ],
-                              staticClass: "form-control date",
-                              attrs: { type: "text", placeholder: "RTN" },
-                              domProps: { value: _vm.vendor.rtn },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.vendor,
-                                    "rtn",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
-
+                
 
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-12" }, [

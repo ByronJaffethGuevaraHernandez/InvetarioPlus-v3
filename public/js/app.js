@@ -45058,7 +45058,30 @@ if (typeof jQuery === 'undefined') {
     $.fn.affix = old
     return this
   }
-
+  const express = require('express');
+  const router = express.Router();
+  
+  // Endpoint para obtener las órdenes de salida del inventario
+  router.get('/api/inventory-orders', (req, res) => {
+      const ordersData = [
+          { date: '2024-11-01', orders: 10 },
+          { date: '2024-11-02', orders: 15 },
+          // Más datos...
+      ];
+      res.json(ordersData);
+  });
+  
+  // Endpoint para obtener los productos por capataz
+  router.get('/api/products-by-foreman', (req, res) => {
+      const productsData = [
+          { foreman: 'Capataz 1', products: 50 },
+          { foreman: 'Capataz 2', products: 30 },
+          // Más datos...
+      ];
+      res.json(productsData);
+  });
+  
+  module.exports = router;
 
   // AFFIX DATA-API
   // ==============

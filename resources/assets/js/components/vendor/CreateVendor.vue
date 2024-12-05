@@ -26,16 +26,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-12">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="material-icons">code</i>
-                    </span>
-                    <div class="form-line">
-                      <input type="text" class="form-control date" placeholder="RTN" v-model="vendor.rtn" />
-                    </div>
-                  </div>
-                </div>
+                
 
 
                 <div class="col-md-12">

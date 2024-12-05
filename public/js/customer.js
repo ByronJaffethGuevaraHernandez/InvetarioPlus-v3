@@ -38909,7 +38909,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Capatas nuevo")]
+        [_vm._v("Capataz nuevo")]
       )
     ])
   },
@@ -39616,7 +39616,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Actualizar capatas")]
+        [_vm._v("Actualizar capataz")]
       )
     ])
   },

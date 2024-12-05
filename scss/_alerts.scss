@@ -35,3 +35,16 @@
         text-shadow: none;
     }
 }
+.alert-button {
+    background-color: #f44336; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  .alert-button:hover {
+    background-color: #d32f2f; /* Color de fondo al pasar el ratón */
+  }

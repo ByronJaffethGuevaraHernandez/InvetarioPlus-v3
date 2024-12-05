@@ -38096,6 +38096,7 @@ module.exports = webpackContext;
 webpackContext.id = 173;
 
 /***/ }),
+
 /* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41999,7 +42000,7 @@ var render = function() {
                 attrs: { type: "button" },
                 on: { click: _vm.showInvoice }
               },
-              [_vm._v("\n      Nueva Factura\n    ")]
+              [_vm._v("\n      Nueva Orden\n    ")]
             )
           ]
         )
@@ -42023,7 +42024,7 @@ var render = function() {
           "div",
           { staticClass: "header", staticStyle: { "padding-bottom": "60px" } },
           [
-            _c("h2", { staticClass: "pull-left" }, [_vm._v("Crear factura")]),
+            _c("h2", { staticClass: "pull-left" }, [_vm._v("Crear Orden")]),
             _vm._v(" "),
             _c("h2", { staticClass: "pull-right" }, [
               _c(
@@ -42362,7 +42363,7 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-md-6" }, [
-                  _c("p", [_vm._v("Número de factura")]),
+                  _c("p", [_vm._v("Número de Orden")]),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
                     _vm._m(6),
@@ -42398,7 +42399,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-md-6" }, [
-                  _c("p", [_vm._v("Fecha de la factura")]),
+                  _c("p", [_vm._v("Fecha de la Orden")]),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
                     _vm._m(7),
@@ -43247,7 +43248,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
       _c("button", { staticClass: "btn bg-teal", attrs: { type: "submit" } }, [
-        _vm._v("Generar Factura")
+        _vm._v("Generar Orden")
       ])
     ])
   }
@@ -45418,7 +45419,7 @@ var render = function() {
                         staticClass: "modal-title",
                         attrs: { id: "CreatePayment" }
                       },
-                      [_vm._v("Pago de factura N° : " + _vm._s(_vm.payment.id))]
+                      [_vm._v("Pago de Orden N° : " + _vm._s(_vm.payment.id))]
                     )
                   ]),
                   _vm._v(" "),
@@ -45893,10 +45894,10 @@ var render = function() {
                     attrs: { id: "CreatePayment" }
                   },
                   [
-                    _vm._v("Pagos de factura N° : " + _vm._s(_vm.id) + "  "),
+                    _vm._v("Pagos de Orden N° : " + _vm._s(_vm.id) + "  "),
                     _c("br"),
                     _vm._v(
-                      " Capatas : " +
+                      " Capataz : " +
                         _vm._s(_vm.invoice.customer.customer_name) +
                         " "
                     )
@@ -46078,7 +46079,7 @@ var render = function() {
               staticClass: "form-control",
               attrs: {
                 type: "text",
-                placeholder: "Buscar por número de factura"
+                placeholder: "Buscar por número de Orden"
               },
               domProps: { value: _vm.invoice_id },
               on: {
@@ -46254,9 +46255,9 @@ var render = function() {
                               }
                             },
                             [
-                              _c("i", { staticClass: "material-icons" }, [
-                                _vm._v("attach_money")
-                              ])
+                                _c("i", { staticClass: "material-icons" }, [
+                                    _vm._v("payment")
+                                  ])
                             ]
                           )
                         ]),
@@ -46343,11 +46344,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("Facturación")]),
+        _c("th", [_vm._v("Ordenes de Salida")]),
         _vm._v(" "),
         _c("th", [_vm._v("Fecha")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Capatas")]),
+        _c("th", [_vm._v("Capataz")]),
         _vm._v(" "),
         _c("th", [_vm._v("Monto total")]),
         _vm._v(" "),

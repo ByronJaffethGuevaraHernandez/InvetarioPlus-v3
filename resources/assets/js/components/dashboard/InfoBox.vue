@@ -11,7 +11,7 @@
             <i class="material-icons">contacts</i>
           </div>
           <div class="content">
-            <div class="text">Capatases</div>
+            <div class="text">Capataces</div>
             <div class="number">{{ info.total_customer }}</div>
           </div>
         </div>
@@ -82,18 +82,18 @@
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-blue hover-zoom-effect">
-          <div class="icon">
-            <i class="material-icons">bar_chart</i>
-          </div>
-          <div class="content">
-            <div class="text">Existencia actual</div>
-            <div class="number">
-              <small>{{ info.total_current_quantity }}</small>
-            </div>
-          </div>
+    <div class="info-box bg-blue hover-zoom-effect">
+      <div class="icon">
+        <i class="material-icons">bar_chart</i>
+      </div>
+      <div class="content">
+        <div class="text">Existencia actual</div>
+        <div class="number">
+          <small>{{ info.total_current_quantity }}</small>
         </div>
       </div>
+    </div>
+  </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <div class="info-box bg-deep-orange hover-zoom-effect">
@@ -109,57 +109,50 @@
         </div>
       </div>
 
-      
-    <<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-  <div class="info-box bg-deep-orange hover-zoom-effect">
-    <div class="icon">
-      <i class="material-icons">calendar_today</i>
-    </div>
-    <div class="content">
-      <div class="text">Calendario</div>
-      <div class="calendar">
-        <CalendarComponent />
-      </div>
-    </div>
-  </div>
-</div>
+
+  
+
+
+  
+
+
+
+
   
 
 
     </div>
   </div>
 </template>
-<script>
-import CalendarComponent from '../CalendarComponent.vue';
-
-export default {
-  components: {
-    CalendarComponent
-  }
-};
-</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-import { EventBus } from "../../vue-asset";
-import mixin from "../../mixin";
+import Swal from 'sweetalert2';
+
 export default {
   data() {
     return {
-      info: {},
-      isLoading: true,
+      info: {
+        total_current_quantity: 5 // Ejemplo de cantidad actual
+      }
     };
   },
-
-  created() {
-    this.getData();
+  watch: {
+    'info.total_current_quantity'(newVal) {
+      if (newVal < 10) {
+        this.showLowStockAlert();
+      }
+    }
   },
   methods: {
-    getData() {
-      axios.get(base_url + "info-box").then((response) => {
-        this.info = response.data;
-        this.isLoading = false;
+    showLowStockAlert() {
+      Swal.fire({
+        icon: 'warning',
+        title: '¡Stock bajo!',
+        text: 'La cantidad actual es baja, REVISAR!.',
+        showConfirmButton: true
       });
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | Existencias')
+@section('title','Inventory | Ordenes de Entradas')
 
 
-@section('page-title','Lista de Existencias')
+@section('page-title','Ordenes de Entradas')
 
 
 @section('content')
@@ -23,7 +23,7 @@
             <div class="header">
                 <h2>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-stock">
-                        Agregar Existencias
+                        Agregar Producto
                     </button>
                 </h2>
             </div>

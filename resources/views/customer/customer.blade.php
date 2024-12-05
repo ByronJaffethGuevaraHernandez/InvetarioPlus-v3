@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | Capatas')
+@section('title','Inventory | Capataz')
 
 
-@section('page-title','Todos los capatases')
+@section('page-title','Todos los capataces')
 
 
 @section('content')
@@ -28,7 +28,7 @@
                           
                           <h2>
                           	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-customer">
-                                Capatas nuevo
+                                Capataz nuevo
                              </button>
                           </h2>
                         </div>

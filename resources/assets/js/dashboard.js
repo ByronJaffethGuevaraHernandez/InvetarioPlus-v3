@@ -1,8 +1,3 @@
-$('#calendar').datetimepicker({
-    format: 'L',
-    inline: true
-  })
-
 require('./vue-asset');
 Vue.component('info-box', require('./components/dashboard/InfoBox.vue'));
 Vue.component('view-invoice', require('./components/invoice/ViewInvoice.vue'));

@@ -24,7 +24,7 @@ class DashboardController extends Controller
         return view('welcome');
     }
 
-
+//////////////////////////////////////////////////////
     public function InfoBox()
     {
 
@@ -62,6 +62,9 @@ class DashboardController extends Controller
 
         ]);
     }
+//////////////////////////////////////////////////////////////////
+
+
 
     /**
      * Show the form for creating a new resource.

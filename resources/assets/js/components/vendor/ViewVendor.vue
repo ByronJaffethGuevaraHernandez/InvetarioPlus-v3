@@ -23,7 +23,6 @@
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>RTN</th>
               <th>Correo electrónico</th>
               <th>Telefono</th>
               <th>Dirección</th>
@@ -34,7 +33,6 @@
           <tbody>
             <tr v-for="(value, index) in vendors.data">
               <td>{{ value.name }}</td>
-              <td>{{ value.rtn }}</td>
               <td>{{ value.email }}</td>
               <td>{{ value.phone }}</td>
               <td>{{ value.address }}</td>
@@ -85,7 +83,6 @@ export default {
     return {
       vendors: [],
       name: "",
-      rtn: "",
       email: "",
       phone: "",
       isLoading: true,
@@ -111,8 +108,6 @@ export default {
           page +
           "&name=" +
           this.name +
-          "&rtn=" +
-          this.rtn +
           "&email=" +
           this.email +
           "&phone=" +

@@ -1,8 +1,8 @@
 @extends('include.master')
 
-@section('title','Inventory | Facturación')
+@section('title','Inventory | Ordenes de Salida')
 
-@section('page-title','Facturación')
+@section('page-title','Ordenes de Salida')
 
 @section('content')
 
@@ -21,7 +21,7 @@
             
                 <h2 style="visibility: hidden;">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-stock">
-                        Nueva factura
+                        Nueva Orden
                     </button>
                 </h2>
             </div>

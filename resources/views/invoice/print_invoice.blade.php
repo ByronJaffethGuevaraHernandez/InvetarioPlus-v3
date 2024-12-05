@@ -30,7 +30,7 @@
       <!-- info row -->
       <div class="row invoice-info">
         <div class="col-sm-4 invoice-col">
-          Información del Capatas
+          Información del Capataz
           <address>
             <strong>{{ $invoice->customer->customer_name }}</strong><br>
 
@@ -47,7 +47,7 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col text-right">
-          <b style="font-weight: bold;color: green">Factura N° : {{ $invoice->id }}</b><br>
+          <b style="font-weight: bold;color: green">Orden N° : {{ $invoice->id }}</b><br>
           <b>Fecha: {{ date("d F Y", strtotime($invoice->sell_date)) }}</b><br>
         </div>
         <!-- /.col -->
@@ -109,29 +109,29 @@
           <!-- <p class="lead">Importe Due 2/22/2014</p> -->
 
           <div class="table-responsive">
-            <table class="table">
-              <tr>
-                <th style="width:50%">Subtotal:</th>
-                <td>$ {{ $sub_total+$discount }}</td>
-              </tr>
-              <tr>
-                <th>Descuento: </th>
-                <td>$ {{ $discount }}</td>
-              </tr>
-              <tr>
-                <th>Total a pagar: </th>
-                <td>$ {{ $sub_total }}</td>
-              </tr> 
-              <tr>
-                <th>Importe pagado: </th>
-                <td>$ {!! $paid = $invoice->paid_amount !!}</td>
-              </tr>  
-              <tr>
-                <th>Importe a debido: </th>
-                <td>$ {{ $sub_total-$paid }}</td>
-              </tr>
-            </table>
-          </div>
+  <table class="table">
+    <tr>
+      <th style="width:50%">Subtotal:</th>
+      <td>L {{ number_format($sub_total + $discount, 2) }}</td>
+    </tr>
+    <tr>
+      <th>Descuento: </th>
+      <td>L {{ number_format($discount, 2) }}</td>
+    </tr>
+    <tr>
+      <th>Total a pagar: </th>
+      <td>L {{ number_format($sub_total, 2) }}</td>
+    </tr>
+    <tr>
+      <th>Importe pagado: </th>
+      <td>L {!! number_format($paid = $invoice->paid_amount, 2) !!}</td>
+    </tr>
+    <tr>
+      <th>Importe a debido: </th>
+      <td>L {{ number_format($sub_total - $paid, 2) }}</td>
+    </tr>
+  </table>
+</div>
         </div>
         <!-- /.col -->
       </div>

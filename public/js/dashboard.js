@@ -6210,6 +6210,11 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
+
+
+
+
+
 /* 4 */
 /***/ (function(module, exports) {
 
@@ -38239,7 +38244,7 @@ module.exports = __webpack_require__(304);
 
 __webpack_require__(2);
 Vue.component('info-box', __webpack_require__(305));
-// Vue.component('view-invoice', require('./components/invoice/ViewInvoice.vue'));
+//Vue.component('view-invoice', require('./components/invoice/ViewInvoice.vue'));
 
 var app = new Vue({
 
@@ -38515,38 +38520,29 @@ var render = function() {
           ])
         ])
       : _vm._e(),
+      //////////////////////////
     _vm._v(" "),
     !_vm.isLoading
       ? _c("div", { staticClass: "row clearfix" }, [
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
-            _c("div", { staticClass: "info-box bg-teal hover-zoom-effect" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("div", { staticClass: "content" }, [
-                _c("div", { staticClass: "text" }, [_vm._v("Capatas")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "number" }, [
-                  _vm._v(_vm._s(_vm.info.total_customer))
+          
+            _c("div", { staticClass: "col-lg-6 col-md-8 col-sm-6 col-xs-12" }, [
+                _c("div", { staticClass: "info-box bg-orange hover-zoom-effect" }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content" }, [
+                    _c("div", { staticClass: "text" }, [_vm._v("Proveedores")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "number" }, [
+                      _vm._v(_vm._s(_vm.info.total_vendor))
+                    ])
+                  ])
                 ])
-              ])
-            ])
-          ]),
+              ]),
+          
+          /////////////////////////////
+         
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
-            _c("div", { staticClass: "info-box bg-orange hover-zoom-effect" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "content" }, [
-                _c("div", { staticClass: "text" }, [_vm._v("Proveedores")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "number" }, [
-                  _vm._v(_vm._s(_vm.info.total_vendor))
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c(
               "div",
               { staticClass: "info-box bg-deep-purple hover-zoom-effect" },
@@ -38564,7 +38560,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c(
               "div",
               { staticClass: "info-box bg-blue-grey hover-zoom-effect" },
@@ -38582,7 +38578,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "info-box bg-indigo hover-zoom-effect" }, [
               _vm._m(4),
               _vm._v(" "),
@@ -38598,7 +38594,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "info-box bg-pink hover-zoom-effect" }, [
               _vm._m(5),
               _vm._v(" "),
@@ -38614,7 +38610,9 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          
+           /////////////////SONA DE PRUEBAS
+           _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "info-box bg-blue hover-zoom-effect" }, [
               _vm._m(6),
               _vm._v(" "),
@@ -38624,14 +38622,56 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "number" }, [
-                  _c("small", [_vm._v(_vm._s(_vm.info.total_current_quantity))])
-                ])
+                  _c("small", [
+                    _vm._v(_vm._s(_vm.info.total_current_quantity))
+                  ])
+                ]),
+                _vm.info.total_current_quantity < 500 ? _c("button", {
+                  staticClass: "alert-button",
+                  on: {
+                    click: function() {
+                      Swal.fire({
+                        icon: 'warning',
+                        title: '¡Stock bajo!',
+                        text: 'La cantidad actual es menor a 10.',
+                        showConfirmButton: true
+                      });
+                    }
+                  }
+                }, [
+                  _vm._v("¡Stock bajo!")
+                ]) : _vm._e()
               ])
             ])
           ]),
-          ///////////////////////////////
+          ///////////////////////
+          _c("div", { staticClass: "" }, [
+            _c("div", { staticClass: "info-box bg-blue hover-zoom-effect" }, [
+              _vm._m(6),
+              _vm._v(" "),
+              _c("div", { staticClass: "content" }, [
+                _c("div", { staticClass: "text" }, [
+                  _vm._v("Existencia actual")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "number" }, [
+                  _c("small", [
+                    _vm._v(_vm._s(_vm.info.total_current_quantity))
+                  ])
+                ]),
+                _vm.info.total_current_quantity < 200 ? Swal.fire({
+                  icon: 'warning',
+                  title: '¡Stock bajo!',
+                  text: 'Revisar para Reabastecer.',
+                  showConfirmButton: true},[
+                  _vm._v("¡Stock bajo!")
+                ]) : _vm._c()
+              ])
+            ])
+          ]),
+        ////////////////////////////////
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-3 col-sm-6 col-xs-12" }, [
             _c(
               "div",
               { staticClass: "info-box bg-deep-orange hover-zoom-effect" },
@@ -38652,21 +38692,7 @@ var render = function() {
               ]
             )
           ]),
-          /////////////////
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-5 col-md-3 col-sm-6 col-xs-12" }, [
-            _c("div", { staticClass: "info-box bg-deep-orange hover-zoom-effect" }, [
-              _c("div", { staticClass: "content" }, [
-                _c("div", { staticClass: "text-bold" }, [_vm._v("Calendario")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "calendar" }, [
-                  _vm._v(" "),
-                  _c("CalendarComponent")  // Coloca el componente aquí
-                ])
-              ])
-            ])
-          ])
-        ////////////////////////////////
+         
          
         ])
       : _vm._e()

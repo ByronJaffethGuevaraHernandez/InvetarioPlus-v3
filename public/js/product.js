@@ -39665,8 +39665,8 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              staticStyle: {
-                                width: "650px",
+                              staticStyle: {///////////////espacio entre lineas tabla productos
+                                width: "450px",
                                 "text-align": "justify",
                                 height: "40px",
                                 "white-space": "normal",

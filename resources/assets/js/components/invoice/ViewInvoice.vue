@@ -38,7 +38,7 @@
         <table class="table table-condensed table-hover table-bordered">
           <thead>
             <tr>
-              <th>Facturación</th>
+              <th>Ordenes de Salida</th>
               <th>Fecha</th>
               <th>Capatas</th>
               <th>Monto total</th>
@@ -76,7 +76,7 @@
               <td>
                 <a @click.prevent="CreatePayment(value.id)" href="" data-toggle="modal" data-target="#smallModal"
                   class="btn bg-blue-grey btn-circle waves-effect waves-circle waves-float"><i
-                    class="material-icons">attach_money</i></a>
+                    class="material-icons"> L </i></a>
               </td>
 
               <td>

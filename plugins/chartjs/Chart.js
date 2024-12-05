@@ -10278,7 +10278,44 @@ module.exports = function(Chart) {
 					me.ticks.push(newTick);
 				}
 			}
-
+			async function renderCharts() {
+				const ordersData = await fetchInventoryOrders();
+				const productsData = await fetchProductsByForeman();
+			
+				// Gráfico de Órdenes de Salida del Inventario
+				const ctxOrders = document.getElementById('ordersChart').getContext('2d');
+				new Chart(ctxOrders, {
+					type: 'line',
+					data: {
+						labels: ordersData.map(order => order.date),
+						datasets: [{
+							label: 'Órdenes de Salida',
+							data: ordersData.map(order => order.orders),
+							borderColor: 'rgba(75, 192, 192, 1)',
+							borderWidth: 1
+						}]
+					}
+				});
+			
+				// Gráfico de Productos por Capataz
+				const ctxProducts = document.getElementById('productsChart').getContext('2d');
+				new Chart(ctxProducts, {
+					type: 'bar',
+					data: {
+						labels: productsData.map(product => product.foreman),
+						datasets: [{
+							label: 'Productos',
+							data: productsData.map(product => product.products),
+							backgroundColor: 'rgba(153, 102, 255, 0.2)',
+							borderColor: 'rgba(153, 102, 255, 1)',
+							borderWidth: 1
+						}]
+					}
+				});
+			}
+			
+			// Llamar a la función para renderizar los gráficos
+			renderCharts();
 			// Always show the right tick
 			var diff = me.ticks[me.ticks.length - 1].diff(me.lastTick, me.tickUnit);
 			if (diff !== 0 || me.scaleSizeInUnits === 0) {
